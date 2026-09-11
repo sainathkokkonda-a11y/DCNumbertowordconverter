@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number to Words Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tool-card">
+  <div class="header-box">
+    <h2>Number to Words Converter</h2>
+    <p>Convert numbers into words instantly (Indian & International)</p>
+  </div>
+
+  <div class="form-body">
+    
+    <!-- Input Number -->
+    <div class="input-group">
+      <label for="numberInput">Enter Number:</label>
+      <input type="number" id="numberInput" class="custom-input" placeholder="e.g. 12500" oninput="convertNumber()">
+    </div>
+
+    <!-- Format Selection -->
+    <div class="input-group">
+      <label for="formatSelect">Number Format System:</label>
+      <select id="formatSelect" class="custom-select" onchange="convertNumber()">
+        <option value="indian">Indian System (Lakhs, Crores)</option>
+        <option value="international">International System (Millions, Billions)</option>
+      </select>
+    </div>
+
+    <!-- Output Result -->
+    <div class="section-card">
+      <div class="result-title">Words Output:</div>
+      <div id="resultOutput" class="result-text">Enter a number above to see the output...</div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-grid">
+      <button class="btn btn-primary" onclick="copyResult()">Copy Words</button>
+      <button class="btn btn-danger" onclick="clearAll()">Clear</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
